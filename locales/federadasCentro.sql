@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`EdadAlumnosTipoSostenimientoCentro` 
   `Mujeres` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idNivelEducativo`, `idTipoSostenimiento`, `idEdad`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/EdadAlumnosTipoSostenimiento';
+ CONNECTION='centro/EdadAlumnosTipoSostenimientoCentro';
 
 
 -- -----------------------------------------------------
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`InmueblesCentro` (
   `Escuela4M` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idTipoSostenimiento`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Inmuebles';
+ CONNECTION='centro/InmueblesCentro';
 
 
 -- -----------------------------------------------------
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`TechosCentro` (
   `NoEspecificado` INT NULL DEFAULT 0 COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idTipoSostenimiento`, `idTipoInmueble`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Techos';
+ CONNECTION='centro/TechosCentro';
 
 
 -- -----------------------------------------------------
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`ParedesCentro` (
   `NoEspecificado` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idTipoSostenimiento`, `idTipoInmueble`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Paredes';
+ CONNECTION='centro/ParedesCentro';
 
 
 -- -----------------------------------------------------
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`PisosCentro` (
   `NoEspecificado` INT NULL DEFAULT 0 COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idTipoSostenimiento`, `idTipoInmueble`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Pisos';
+ CONNECTION='centro/PisosCentro';
 
 
 -- -----------------------------------------------------
@@ -125,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`DisponibilidadRecursosInmueblesCentr
   `NoAplica` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idTipoSostenimiento`, `idRecursosInmuebles`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/DisponibilidadRecursosInmuebles';
+ CONNECTION='centro/DisponibilidadRecursosInmueblesCentro';
 
 
 -- -----------------------------------------------------
@@ -142,7 +142,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`ServicioAlumnosTipoSostenimientoCent
   `Mujeres` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idNivelEducativo`, `idTipoServicio`, `idTipoSostenimiento`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/ServicioAlumnosTipoSostenimiento';
+ CONNECTION='centro/ServicioAlumnosTipoSostenimientoCentro';
 
 
 -- -----------------------------------------------------
@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`TurnoAlumnosTipoSostenimientoCentro`
   `Mujeres` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idNivelEducativo`, `idTurno`, `idTipoSostenimiento`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/TurnoAlumnosTipoSostenimiento';
+ CONNECTION='centro/TurnoAlumnosTipoSostenimientoCentro';
 
 
 -- -----------------------------------------------------
@@ -188,7 +188,8 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal1Centro` (
   `NoEspecificado` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idCondicionLaboral`, `idCondicionPresencia`, `idCondicionIdentificacion`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Personal1';
+ CONNECTION='centro/Personal1Centro';
+
 
 -- -----------------------------------------------------
 -- Table `ProyectoFinal`.`Personal2`
@@ -215,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal2Centro` (
   `NoEspecificado` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idTipoCentro`, `idNivelEducativo`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Personal2';
+ CONNECTION='centro/Personal2Centro';
 
 
 -- -----------------------------------------------------
@@ -241,7 +242,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal3Centro` (
   `NoEspecificado` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idNivelEducativo`, `idTipoSostenimiento`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Personal3';
+ CONNECTION='centro/Personal3Centro';
 
 
 -- -----------------------------------------------------
@@ -257,7 +258,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal4Centro` (
   `Privado` INT NULL COMMENT '',
   PRIMARY KEY (`idTipoServicio`, `idNivelEducativo`, `idEntidadFederativa`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Personal4';
+ CONNECTION='centro/Personal4Centro';
 
 
 -- -----------------------------------------------------
@@ -273,8 +274,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal5Centro` (
   `Privado` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idNivelEducativo`, `idTurno`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Personal5';
-
+ CONNECTION='centro/Personal5Centro';
 
 
 -- -----------------------------------------------------
@@ -292,7 +292,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal6Centro` (
   `NoEspecificado` INT NULL COMMENT '',
   PRIMARY KEY (`IdEntidadFederativa`, `idTipoCentro`, `idNivelEducativo`, `idFuncionDocente`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Personal6';
+ CONNECTION='centro/Personal6Centro';
 
 
 -- -----------------------------------------------------
@@ -314,7 +314,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal7Centro` (
   `PromedioPlazaCentroTrabajo` FLOAT NULL COMMENT '',
   PRIMARY KEY (`IdEntidadFederativa`, `idFuncionDocente`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Personal7';
+ CONNECTION='centro/Personal7Centro';
 
 
 -- -----------------------------------------------------
@@ -334,7 +334,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personas3Centro` (
   `NoEspecificado` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `Sexo`, `idEdadQuincenales`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Personas3';
+ CONNECTION='centro/Personas3Centro';
 
 
 -- -----------------------------------------------------
@@ -353,7 +353,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personas2Centro` (
   `PromedioPlazaCentroTrabajo` FLOAT NULL COMMENT '',
   PRIMARY KEY (`IdEntidadFederativa`, `idTipoCentro`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Personas2';
+ CONNECTION='centro/Personas2Centro';
 
 
 -- -----------------------------------------------------
@@ -372,7 +372,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personas4Centro` (
   `NoEspecificado` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idNivelEducativo`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Personas4';
+ CONNECTION='centro/Personas4Centro';
 
 
 -- -----------------------------------------------------
@@ -398,7 +398,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`CentrosTrabajo1Centro` (
   `Secundaria` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/CentrosTrabajo1';
+ CONNECTION='centro/CentrosTrabajo1Centro';
 
 
 -- -----------------------------------------------------
@@ -413,7 +413,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`EscuelasEntidadFederativaCentro` (
   `Privado` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idNivelEducativo`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/EscuelasEntidadFederativa';
+ CONNECTION='centro/EscuelasEntidadFederativaCentro';
 
 
 -- -----------------------------------------------------
@@ -449,7 +449,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`CentrosTrabajo7Centro` (
   `ConAulasClase` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idNivelEducativo`, `idTipoServicio`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/CentrosTrabajo7';
+ CONNECTION='centro/CentrosTrabajo7Centro';
 
 
 -- -----------------------------------------------------
@@ -467,7 +467,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`DisponibilidadRecursosEscuelaServici
   `NoEspecificado` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idNivelEducativo`, `idTipoServicio`, `idRecursoEscuela`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/DisponibilidadRecursosEscuelaServicio';
+ CONNECTION='centro/DisponibilidadRecursosEscuelaServicioCentro';
 
 
 -- -----------------------------------------------------
@@ -486,7 +486,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`CentrosTrabajo6Centro` (
   `CentroAtencionMultiple` VARCHAR(45) NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idTipoSostenimiento`, `idTurno`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/CentrosTrabajo6';
+ CONNECTION='centro/CentrosTrabajo6Centro';
 
 
 -- -----------------------------------------------------
@@ -515,7 +515,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`CentrosTrabajo8Centro` (
   `Escuelas` INT NULL COMMENT '',
   PRIMARY KEY (`idTipoSostenimiento`, `idNivelEducativo`, `idEntidadFederativa`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/CentrosTrabajo8';
+ CONNECTION='centro/CentrosTrabajo8Centro';
 
 
 -- -----------------------------------------------------
@@ -533,7 +533,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`DisponibilidadRecursosEscuelaNivelEd
   `NoEspecificado` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idNivelEducativo`, `idRecursoEscuela`, `idTipoSostenimiento`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/DisponibilidadRecursosEscuelaNivelEducativo';
+ CONNECTION='centro/DisponibilidadRecursosEscuelaNivelEducativoCentro';
 
 
 -- -----------------------------------------------------
@@ -555,7 +555,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`AlumnosCentro` (
   `NoEspecificado` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `idNivelEducativo`, `idTipoServicio`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Alumnos';
+ CONNECTION='centro/AlumnosCentro';
 
 
 -- -----------------------------------------------------
@@ -574,5 +574,5 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personas1Centro` (
   `DocenteApoyo` INT NULL COMMENT '',
   PRIMARY KEY (`idEntidadFederativa`, `Sexo`, `idEdadQuincenales`)  COMMENT '')
  ENGINE = FEDERATED
- CONNECTION='centro/Personas1';
+ CONNECTION='centro/Personas1Centro';
 
