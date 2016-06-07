@@ -8,58 +8,6 @@ FOREIGN DATA WRAPPER mysql
 OPTIONS (USER 'teamDatabase',PASSWORD 'contrasena', HOST '192.168.1.101', PORT 3306, DATABASE 'ProyectoFinal');
 
 -- -----------------------------------------------------
--- Table `ProyectoFinal`.`NivelEducativo`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`NivelEducativoNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`NivelEducativoNorte` (
-  `idNivelEducativo` INT NOT NULL COMMENT '',
-  `NivelEducativo` VARCHAR(90) NULL COMMENT '',
-  PRIMARY KEY (`idNivelEducativo`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/NivelEducativo';
-
-
--- -----------------------------------------------------
--- Table `ProyectoFinal`.`TipoSostenimiento`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`TipoSostenimientoNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`TipoSostenimientoNorte` (
-  `idTipoSostenimiento` INT NOT NULL COMMENT '',
-  `TipoSostenimiento` VARCHAR(45) NULL COMMENT '',
-  PRIMARY KEY (`idTipoSostenimiento`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/TipoSostenimiento';
-
-
--- -----------------------------------------------------
--- Table `ProyectoFinal`.`EntidadFederativa`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`EntidadFederativaNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`EntidadFederativaNorte` (
-  `idEntidadFederativa` INT NOT NULL COMMENT '',
-  `EntidadFederativa` VARCHAR(90) NULL COMMENT '',
-  PRIMARY KEY (`idEntidadFederativa`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/EntidadFederativa';
-
-
--- -----------------------------------------------------
--- Table `ProyectoFinal`.`Edad`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`EdadNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`EdadNorte` (
-  `idEdad` INT NOT NULL COMMENT '',
-  `RangoEdad` VARCHAR(90) NULL COMMENT '',
-  PRIMARY KEY (`idEdad`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/Edad';
-
-
--- -----------------------------------------------------
 -- Table `ProyectoFinal`.`EdadAlumnosTipoSostenimiento`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `ProyectoFinal`.`EdadAlumnosTipoSostenimientoNorte` ;
@@ -74,45 +22,6 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`EdadAlumnosTipoSostenimientoNorte` (
   PRIMARY KEY (`idEntidadFederativa`, `idNivelEducativo`, `idTipoSostenimiento`, `idEdad`)  COMMENT '')
  ENGINE = FEDERATED
  CONNECTION='norte/EdadAlumnosTipoSostenimiento';
-
-
--- -----------------------------------------------------
--- Table `ProyectoFinal`.`TipoServicio`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`TipoServicioNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`TipoServicioNorte` (
-  `idTipoServicio` INT NOT NULL COMMENT '',
-  `TipoServicio` VARCHAR(90) NULL COMMENT '',
-  PRIMARY KEY (`idTipoServicio`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/TipoServicio';
-
-
--- -----------------------------------------------------
--- Table `ProyectoFinal`.`Turno`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`TurnoNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`TurnoNorte` (
-  `idTurno` INT NOT NULL COMMENT '',
-  `Turno` VARCHAR(90) NULL COMMENT '',
-  PRIMARY KEY (`idTurno`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/Turno';
-
-
--- -----------------------------------------------------
--- Table `ProyectoFinal`.`TipoInmueble`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`TipoInmuebleNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`TipoInmuebleNorte` (
-  `idTipoInmueble` INT NOT NULL COMMENT '',
-  `TipoInmueble` VARCHAR(100) NULL COMMENT '',
-  PRIMARY KEY (`idTipoInmueble`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/TipoInmueble';
 
 
 -- -----------------------------------------------------
@@ -200,19 +109,6 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`PisosNorte` (
 
 
 -- -----------------------------------------------------
--- Table `ProyectoFinal`.`RecursosInmuebles`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`RecursosInmueblesNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`RecursosInmueblesNorte` (
-  `idRecursosInmuebles` INT NOT NULL COMMENT '',
-  `RecursosInmuebles` VARCHAR(90) NULL COMMENT '',
-  PRIMARY KEY (`idRecursosInmuebles`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/RecursosInmuebles';
-
-
--- -----------------------------------------------------
 -- Table `ProyectoFinal`.`DisponibilidadRecursosInmuebles`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `ProyectoFinal`.`DisponibilidadRecursosInmueblesNorte` ;
@@ -265,45 +161,6 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`TurnoAlumnosTipoSostenimientoNorte` 
 
 
 -- -----------------------------------------------------
--- Table `ProyectoFinal`.`CondicionLaboral`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`CondicionLaboralNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`CondicionLaboralNorte` (
-  `idCondicionLaboral` INT NOT NULL COMMENT '',
-  `CondicionLaboral` VARCHAR(45) NULL COMMENT '',
-  PRIMARY KEY (`idCondicionLaboral`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/CondicionLaboral';
-
-
--- -----------------------------------------------------
--- Table `ProyectoFinal`.`CondicionPresencia`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`CondicionPresenciaNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`CondicionPresenciaNorte` (
-  `idCondicionPresencia` INT NOT NULL COMMENT '',
-  `CondicionPresencia` VARCHAR(45) NULL COMMENT '',
-  PRIMARY KEY (`idCondicionPresencia`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/CondicionPresencia';
-
-
--- -----------------------------------------------------
--- Table `ProyectoFinal`.`CondicionIdentificacion`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`CondicionIdentificacionNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`CondicionIdentificacionNorte` (
-  `idCondicionIdentificacion` INT NOT NULL COMMENT '',
-  `CondicionIdentificacion` VARCHAR(45) NULL COMMENT '',
-  PRIMARY KEY (`idCondicionIdentificacion`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/CondicionIdentificacion';
-
-
--- -----------------------------------------------------
 -- Table `ProyectoFinal`.`Personal1`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `ProyectoFinal`.`Personal1Norte` ;
@@ -332,17 +189,6 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal1Norte` (
  CONNECTION='norte/Personal1';
 
 
--- -----------------------------------------------------
--- Table `ProyectoFinal`.`TipoNorte`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`TipoCentroNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`TipoCentroNorte` (
-  `idTipoNorte` INT NOT NULL COMMENT '',
-  `TipoNorte` VARCHAR(90) NULL COMMENT '',
-  PRIMARY KEY (`idTipoNorte`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/TipoCentro';
 
 
 -- -----------------------------------------------------
@@ -352,7 +198,7 @@ DROP TABLE IF EXISTS `ProyectoFinal`.`Personal2Norte` ;
 
 CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal2Norte` (
   `idEntidadFederativa` INT NOT NULL COMMENT '',
-  `idTipoNorte` INT NOT NULL COMMENT '',
+  `idTipoCentro` INT NOT NULL COMMENT '',
   `idNivelEducativo` INT NOT NULL COMMENT '',
   `TotalPersonal` INT NULL COMMENT '',
   `DirectorEscuela` INT NULL COMMENT '',
@@ -368,7 +214,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal2Norte` (
   `AdministrativaCentros` INT NULL COMMENT '',
   `Otra` INT NULL COMMENT '',
   `NoEspecificado` INT NULL COMMENT '',
-  PRIMARY KEY (`idEntidadFederativa`, `idTipoNorte`, `idNivelEducativo`)  COMMENT '')
+  PRIMARY KEY (`idEntidadFederativa`, `idTipoCentro`, `idNivelEducativo`)  COMMENT '')
  ENGINE = FEDERATED
  CONNECTION='norte/Personal2';
 
@@ -432,32 +278,19 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal5Norte` (
 
 
 -- -----------------------------------------------------
--- Table `ProyectoFinal`.`FuncionDocente`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`FuncionDocenteNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`FuncionDocenteNorte` (
-  `idFuncionDocente` INT NOT NULL COMMENT '',
-  `FuncionDocente` VARCHAR(90) NOT NULL COMMENT '',
-  PRIMARY KEY (`idFuncionDocente`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/FuncionDocente';
-
-
--- -----------------------------------------------------
 -- Table `ProyectoFinal`.`Personal6`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `ProyectoFinal`.`Personal6Norte` ;
 
 CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal6Norte` (
   `IdEntidadFederativa` INT NOT NULL COMMENT '',
-  `idTipoNorte` INT NOT NULL COMMENT '',
+  `idTipoCentro` INT NOT NULL COMMENT '',
   `idNivelEducativo` INT NOT NULL COMMENT '',
   `idFuncionDocente` INT NOT NULL COMMENT '',
   `TienePlaza` INT NULL COMMENT '',
   `NoTienePlaza` INT NULL COMMENT '',
   `NoEspecificado` INT NULL COMMENT '',
-  PRIMARY KEY (`IdEntidadFederativa`, `idTipoNorte`, `idNivelEducativo`, `idFuncionDocente`)  COMMENT '')
+  PRIMARY KEY (`IdEntidadFederativa`, `idTipoCentro`, `idNivelEducativo`, `idFuncionDocente`)  COMMENT '')
  ENGINE = FEDERATED
  CONNECTION='norte/Personal6';
 
@@ -483,19 +316,6 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal7Norte` (
  ENGINE = FEDERATED
  CONNECTION='norte/Personal7';
 
-
--- -----------------------------------------------------
--- Table `ProyectoFinal`.`EdadQuincenales`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`EdadQuincenalesNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`EdadQuincenalesNorte` (
-  `idEdadQuincenales` INT NOT NULL COMMENT '',
-  `EdadQuincenales` VARCHAR(90) NOT NULL COMMENT '',
-  PRIMARY KEY (`idEdadQuincenales`)  COMMENT '',
-  UNIQUE INDEX `EdadQuincenales_UNIQUE` (`EdadQuincenales` ASC)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/EdadQuincenales';
 
 
 -- -----------------------------------------------------
@@ -525,14 +345,14 @@ DROP TABLE IF EXISTS `ProyectoFinal`.`Personas2Norte` ;
 
 CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personas2Norte` (
   `IdEntidadFederativa` INT NOT NULL COMMENT '',
-  `idTipoNorte` INT NOT NULL COMMENT '',
+  `idTipoCentro` INT NOT NULL COMMENT '',
   `TotalPersonasDocentes` INT NULL COMMENT '',
   `Centro1` INT NULL COMMENT '',
   `Centro2` INT NULL COMMENT '',
   `Centro3` INT NULL COMMENT '',
   `Centro4M` INT NULL COMMENT '',
   `PromedioPlazaCentroTrabajo` FLOAT NULL COMMENT '',
-  PRIMARY KEY (`IdEntidadFederativa`, `idTipoNorte`)  COMMENT '')
+  PRIMARY KEY (`IdEntidadFederativa`, `idTipoCentro`)  COMMENT '')
  ENGINE = FEDERATED
  CONNECTION='norte/Personas2';
 
@@ -631,19 +451,6 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`CentrosTrabajo7Norte` (
   PRIMARY KEY (`idEntidadFederativa`, `idNivelEducativo`, `idTipoServicio`)  COMMENT '')
  ENGINE = FEDERATED
  CONNECTION='norte/CentrosTrabajo7';
-
-
--- -----------------------------------------------------
--- Table `ProyectoFinal`.`RecursoEscuela`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ProyectoFinal`.`RecursoEscuelaNorte` ;
-
-CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`RecursoEscuelaNorte` (
-  `idRecursoEscuela` INT NOT NULL COMMENT '',
-  `RecursoEscuela` VARCHAR(90) NULL COMMENT '',
-  PRIMARY KEY (`idRecursoEscuela`)  COMMENT '')
- ENGINE = FEDERATED
- CONNECTION='norte/RecursoEscuela';
 
 
 -- -----------------------------------------------------

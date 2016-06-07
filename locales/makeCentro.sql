@@ -3,3 +3,4 @@
 \. quitarSur.sql
 \. federadasNorte.sql
 \. federadasSur.sql
+\. renameCentro.sql
