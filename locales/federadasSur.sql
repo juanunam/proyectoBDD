@@ -298,7 +298,7 @@ CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal6Sur` (
 -- Table `ProyectoFinal`.`Personal7`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `ProyectoFinal`.`Personal7Sur` ;
-ex
+
 CREATE TABLE IF NOT EXISTS `ProyectoFinal`.`Personal7Sur` (
   `IdEntidadFederativa` INT NOT NULL COMMENT '',
   `idFuncionDocente` INT NOT NULL COMMENT '',
