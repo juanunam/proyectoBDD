@@ -3,17 +3,16 @@ Alumnos:
 	Cossio Placencia Alicia
 	González Aguilar Juan Carlos
 
+Repositorio en github= https://github.com/juanunam/proyectoBDD
 Entregables obligatorios:
 
 	4 respaldos:
 		Completa:
  correr en mysql source completa.sql
 	Locales:
-	*Norte: correr en mysql source makeNorte.sql 
-
-	* Centro:correr en mysql source makeCentro.sql
-
-	*Sur:   correr en mysql source makeSur.sql
+	Norte: correr en mysql source makeNorte.sql 
+	Centro:correr en mysql source makeCentro.sql
+	Sur:   correr en mysql source makeSur.sql
 
 	25 consultas:
 		Consultas:
@@ -23,7 +22,8 @@ Entregables obligatorios:
 
 Entregables extras:
 
-	Resultados: Pantallas de las corridas de los scripts
+	Resultados: 
+		Pantallas de las corridas de los scripts
 		Consultas-resultados:
 
 			Equivalentes: Pantallas de las consultas equivalentes
@@ -45,3 +45,14 @@ Entregables extras:
 		CSVs que contienen las bases de datos originales (registros)
 	Plugins:
 		Plugin escrito en python para generar diccionario de datos automaticamente.
+	PrimerosModelo:
+		Prototipo miscelanea de todos los compañeros, no es parte del proyecto final pero es un antecedente
+	EjemploFederadas:
+		Documendo con un ejemplo de uso de tablas federadas en mysql
+
+Requisitos:
+	mysql
+	mysql-workbench (opcional)
+	open-ssh
+	FEDERATED-mysql (habilitado)
+	
