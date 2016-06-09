@@ -7,11 +7,11 @@ Entregables obligatorios:
 	4 respaldos:
 		Completa: correr en mysql source completa.sql
 		Locales:
-			 Norte: correr en mysql source makeNorte.sql <br/>
+ Norte: correr en mysql source makeNorte.sql <br/>
 
-			 Centro:correr en mysql source makeCentro.sql
+ Centro:correr en mysql source makeCentro.sql
 
-			 Sur:   correr en mysql source makeSur.sql
+ Sur:   correr en mysql source makeSur.sql
 
 	25 consultas:
 		Consultas:
