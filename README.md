@@ -4,14 +4,16 @@ Alumnos:
 	González Aguilar Juan Carlos
 
 Entregables obligatorios:
+
 	4 respaldos:
-		Completa: correr en mysql source completa.sql
+		Completa:
+ correr en mysql source completa.sql
 		Locales:
- Norte: correr en mysql source makeNorte.sql <br/>
+ *Norte: correr en mysql source makeNorte.sql *
 
- Centro:correr en mysql source makeCentro.sql
+* Centro:correr en mysql source makeCentro.sql*
 
- Sur:   correr en mysql source makeSur.sql
+ *Sur:   correr en mysql source makeSur.sql*
 
 	25 consultas:
 		Consultas:
@@ -22,7 +24,8 @@ Entregables obligatorios:
 Entregables extras:
 
 	Resultados: Pantallas de las corridas de los scripts
-		Consultas->resultados:
+		Consultas-resultados:
+
 			Equivalentes: Pantallas de las consultas equivalentes
 			Globales: Pantallas de las consultas globales
 			Locales: Pantallas de las consultas locales
