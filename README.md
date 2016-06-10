@@ -36,6 +36,7 @@ Entregables extras:
 	Modelos: Modelos para obtener el modelo en Workbench
 		Completa:
 			Completa.mwb
+			model.pdf
 		Locales:
 			locales.mwb
 	
@@ -47,6 +48,7 @@ Entregables extras:
 		Plugin escrito en python para generar diccionario de datos automaticamente.
 	PrimerosModelo:
 		Prototipo miscelanea de todos los compañeros, no es parte del proyecto final pero es un antecedente
+
 	EjemploFederadas:
 		Documendo con un ejemplo de uso de tablas federadas en mysql
 
