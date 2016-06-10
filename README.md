@@ -1,7 +1,9 @@
 Trabajo Base de datos distribuidas
-Alumnos:
+
+	Alumnos:
 		Cossio Placencia Alicia
 		González Aguilar Juan Carlos
+		Abaroa Moreno Fausto
 
 Repositorio en github= https://github.com/juanunam/proyectoBDD
 Entregables obligatorios:
